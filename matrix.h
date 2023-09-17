@@ -22,21 +22,14 @@
     std::cout << "Enter 0, for exit program" << std::endl;
 */
 class matrix {
-private:
-
 public:
-    int matrix_size;
+    int matrix_cols = 0;
     std::vector<int> matrix_data;
 
+    void create_matrix(matrix matrix_input);
     std::vector<int> vector_filling(const char* input);
-
-    /*matrix(int size);
-
-    ~matrix();
-
     void print_matrix();
 
-    void setFieldValue(int row, int col, int value);*/
 };
 
 

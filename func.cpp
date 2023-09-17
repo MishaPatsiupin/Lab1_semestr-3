@@ -21,7 +21,23 @@ int get_choize(int min, int max) {
             std::cout << "Error input. Please try again." << std::endl;
             choize = -1;
         } else {
-            return 0;
+            return choize;
+        }
+    }
+}
+
+int get_number(int min) {
+    int number = -1;
+
+    while (number == -1) {
+        std::cin >> number;
+
+        if (std::cin.fail() || number < min) {
+            std::cin.clear();
+            std::cout << "Error input. Please try again." << std::endl;
+            number = -1;
+        } else {
+            return number;
         }
     }
 }
@@ -29,12 +45,12 @@ int get_choize(int min, int max) {
 
 int menu() {
     int choize = -1;
-    std::cout << "----------Matrix Calculator--------" << std::endl;
+    std::cout << "\n----------Matrix Calculator--------" << std::endl;
     std::cout << "Enter 1, to create a new matrix" << std::endl; //автоматич
     std::cout << "Enter 2, To view the matrix" << std::endl;
     std::cout << "Enter 3, to view or minimize an arbitrary matrix element" << std::endl; //+строка, толбец
     std::cout << "Enter 4, for transposing a matrix" << std::endl;
-    std::cout << "Enter 0, for exit program" << std::endl;
+    std::cout << "Enter 0, for exit program\n" << std::endl;
 choize = get_choize(0, 4);
     return choize;
 }
@@ -52,8 +68,9 @@ void fill_new_vector(std::vector<int> &vec, const std::string &str) {
     }
 }
 
-void create_new_matrix(){
-
+int random(int min, int max) {
+    srand(time(NULL));
+    return rand() % (max - min + 1) + min;
 }
 
 

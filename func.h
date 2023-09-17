@@ -3,12 +3,14 @@
 #include <vector>
 #include <iostream>
 #include <sstream>
-#include <string>
+//#include <string>
+#include <cstdlib>
+#include <ctime>
 
 int get_choize(int min, int max);
 int menu();
-
-
+int get_number(int min);
+int random(int min, int max);
 
 
 

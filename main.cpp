@@ -14,16 +14,15 @@
 
 int main() {
     int func_choize = menu();
-    matrix matrix_input;
-
+    matrix matrix_my;
 
 
     switch (func_choize) {
         case 0:{
-            exit;
+            return 0;
         }
         case 1:{
-
+matrix_my.create_matrix(matrix_my);
         }
         case 2:{
 
