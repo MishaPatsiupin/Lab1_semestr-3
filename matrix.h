@@ -25,17 +25,18 @@ class matrix {
 private:
 
 public:
-    int matrix_cols;
     int matrix_size;
     std::vector<int> matrix_data;
 
-    matrix(int size);
+    std::vector<int> vector_filling(const char* input);
+
+    /*matrix(int size);
 
     ~matrix();
 
     void print_matrix();
 
-    void setFieldValue(int row, int col, int value);
+    void setFieldValue(int row, int col, int value);*/
 };
 
 

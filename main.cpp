@@ -13,8 +13,29 @@
 */
 
 int main() {
-    int func = menu();
+    int func_choize = menu();
     matrix matrix_input;
+
+
+
+    switch (func_choize) {
+        case 0:{
+            exit;
+        }
+        case 1:{
+
+        }
+        case 2:{
+
+        }
+        case 3:{
+
+        }
+        case 4:{
+
+        }
+    }
+
     std::cout << "Hello, World!" << std::endl;
     return 0;
 }

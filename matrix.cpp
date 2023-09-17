@@ -1,7 +1,10 @@
 #include "matrix.h"
 
 //крч при вводе считать, скако ввели, и чтоб кратно столбцам
-matrix::matrix(int size) {
+
+
+
+/*matrix::matrix(int size) {
     this->matrix_size = size;
     this->matrix_data.resize(size * size);
 }
@@ -24,6 +27,15 @@ void matrix::setFieldValue(int row, int col, int value) {
     } else {
         std::cout << "Некорректные индексы поля." << std::endl;
     }
+}*/
+
+
+std::vector<int> matrix::vector_filling(const char *input) {
+    std::vector<int> result;
+    std::istringstream iss(input);
+    int number;
+    while (iss >> number) {
+        result.push_back(number);
+    }
+    return result;
 }
-
-
