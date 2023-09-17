@@ -69,7 +69,11 @@ void fill_new_vector(std::vector<int> &vec, const std::string &str) {
 }
 
 int random(int min, int max) {
-    srand(time(NULL));
+    static bool initialized = false;
+    if (!initialized) {
+        srand(time(NULL));
+        initialized = true;
+    }
     return rand() % (max - min + 1) + min;
 }
 

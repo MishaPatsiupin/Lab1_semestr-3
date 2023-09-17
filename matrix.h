@@ -26,7 +26,7 @@ public:
     int matrix_cols = 0;
     std::vector<int> matrix_data;
 
-    void create_matrix(matrix matrix_input);
+    void create_matrix();
     std::vector<int> vector_filling(const char* input);
     void print_matrix();
 

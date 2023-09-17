@@ -22,7 +22,7 @@ int main() {
             return 0;
         }
         case 1:{
-matrix_my.create_matrix(matrix_my);
+matrix_my.create_matrix();
         }
         case 2:{
 
