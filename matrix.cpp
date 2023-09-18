@@ -24,9 +24,7 @@ void matrix::create_matrix() {
         for (int i = this->matrix_cols * temp_numbers_matrix_rows; i > 0; i--) {
             this->matrix_data.push_back(random(-20, 20));
         }
-    }
-
-    else {
+    } else {
         std::cout << "\nEnter to number of columns: ";
         this->matrix_cols = get_number(1);
 
@@ -74,7 +72,7 @@ void matrix::transposing_matrix() {
     } else {
         this->matrix_data = transposing(this->matrix_data, this->matrix_cols);
         this->matrix_cols = this->matrix_data.size() / this->matrix_cols;
-    print_matrix();
+        print_matrix();
     }
 }
 
@@ -87,41 +85,41 @@ void matrix::change_one_element() {
     j = get_number(0);
 
     std::cout << "Enter a new value --> ";
-    std::cin >> this->matrix_data[(i-1)* this->matrix_cols + (j-1)];
+    std::cin >> this->matrix_data[(i - 1) * this->matrix_cols + (j - 1)];
     std::cout << "Okk.";
     print_matrix();
 }
 
 void matrix::change_data() {
-        int func_choize;
+    int func_choize;
 
-            func_choize = menu_change_data();
+    func_choize = menu_change_data();
 
-            switch (func_choize) {
-                case 0: {
-                    break;
-                }
-                case 1: {
-                    this->change_one_element();
-                    break;
-                }
-                case 2: {
-                    this->add_row();
-                    break;
-                }
-                case 3: {
+    switch (func_choize) {
+        case 0: {
+            break;
+        }
+        case 1: {
+            this->change_one_element();
+            break;
+        }
+        case 2: {
+            this->add_row();
+            break;
+        }
+        case 3: {
+            this->delete_row();
+            break;
+        }
+        case 4: {
 
-                    break;
-                }
-                case 4: {
+            break;
+        }
+        case 5: {
 
-                    break;
-                }
-                case 5: {
-
-                    break;
-                }
-            }
+            break;
+        }
+    }
 }
 
 void matrix::add_row() {
@@ -129,13 +127,25 @@ void matrix::add_row() {
     std::cout << "After which line will the new line be placed?";
     after_this_rows = get_number(0);
 
-    for (int i = 1; i <= this->matrix_cols; i++){
+    for (int i = 1; i <= this->matrix_cols; i++) {
         int time_znah = 0;
         std::cout << "Enter the " << i << "st element, -->";
         std::cin >> time_znah;
 
         auto position = this->matrix_data.begin() + after_this_rows * this->matrix_cols + i - 1;
         this->matrix_data.insert(position, time_znah);
+    }
+    print_matrix();
+}
+
+void matrix::delete_row() {
+    print_matrix();
+    int del_rows_after_this = 0;
+    std::cout << "After which row do you want to delete?";
+    del_rows_after_this = get_number(0);
+
+    for (int i = 0; i < this->matrix_cols; i++) {
+        this->matrix_data.erase(this->matrix_data.begin() + del_rows_after_this * this->matrix_cols);
     }
     print_matrix();
 }
