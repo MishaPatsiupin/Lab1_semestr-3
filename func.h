@@ -3,7 +3,6 @@
 #include <vector>
 #include <iostream>
 #include <sstream>
-//#include <string>
 #include <cstdlib>
 #include <ctime>
 
@@ -11,8 +10,7 @@ int get_choize(int min, int max);
 int menu();
 int get_number(int min);
 int random(int min, int max);
-std::vector<int> char_to_vector(const char* input);
-
+std::vector<int> transposing (std::vector<int> matrix_data, int cols);
 
 
 

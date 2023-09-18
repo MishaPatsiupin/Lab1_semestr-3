@@ -14,25 +14,29 @@
 */
 
 int main() {
-    int func_choize = menu();
     matrix matrix_my;
+    int func_choize;
 
+    while (true) {
+        system("cls");
+        func_choize = menu();
 
-    switch (func_choize) {
-        case 0: {
-            return 0;
-        }
-        case 1: {
-            matrix_my.create_matrix();
-        }
-        case 2: {
+        switch (func_choize) {
+            case 0: {
+                return 0;
+            }
+            case 1: {
+                matrix_my.create_matrix();
+            }
+            case 2: {
+                matrix_my.print_matrix();
+            }
+            case 3: {
+                matrix_my.transposing_matrix();
+            }
+            case 4: {
 
-        }
-        case 3: {
-
-        }
-        case 4: {
-
+            }
         }
     }
 

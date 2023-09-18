@@ -2,17 +2,6 @@
 #include "func.h"
 
 
-/*
-std::vector<int> matrix::vector_filling(const char *input) {
-    std::vector<int> result;
-    std::istringstream iss(input);
-    int number;
-    while (iss >> number) {
-        result.push_back(number);
-    }
-    return result;
-}
-*/
 void matrix::create_matrix() {
 
     std::cout << "\nEnter 0, to auto create new matrix" << std::endl;
@@ -63,11 +52,16 @@ void matrix::print_matrix() {
     std::cout << "\n Your matrix:\n";
     for (int j = 0; j < this->matrix_data.size() / this->matrix_cols; j++) {
         for (int i = 0; i < matrix_cols; i++) {
-            printf("%5d", matrix_data[j* this->matrix_cols + i]);
+            printf("%5d", matrix_data[j * this->matrix_cols + i]);
         }
         std::cout << std::endl;
     }
     std::cout << std::endl;
+}
+
+void matrix::transposing_matrix() {
+    this->matrix_data = transposing(this->matrix_data, this->matrix_cols);
+    this->matrix_cols = this->matrix_data.size() / this->matrix_cols;
 }
 
 

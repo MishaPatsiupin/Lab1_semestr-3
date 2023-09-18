@@ -15,8 +15,8 @@
  *классы должны быть разделены на файлы '.h' и '.cpp'
  *Меню должно быть
  *
-    std::cout << "Enter 1, to create a new matrix" << std::endl; //автоматич
-    std::cout << "Enter 2, To view the matrix" << std::endl;
+    std::cout << "Enter 1, to create a new matrix" << std::endl; //+++
+    std::cout << "Enter 2, To view the matrix" << std::endl;//+++
     std::cout << "Enter 3, to view or minimize an arbitrary matrix element" << std::endl; //+строка, толбец
     std::cout << "Enter 4, for transposing a matrix" << std::endl;
     std::cout << "Enter 0, for exit program" << std::endl;
@@ -27,8 +27,9 @@ public:
     std::vector<int> matrix_data;
 
     void create_matrix();
-    std::vector<int> vector_filling(const char* input);
     void print_matrix();
+
+    void transposing_matrix();
 
 };
 

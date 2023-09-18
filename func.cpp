@@ -77,17 +77,18 @@ int random(int min, int max) {
     return rand() % (max - min + 1) + min;
 }
 
-std::vector<int> char_to_vector(const char* input) {
-    std::vector<int> result;
-    std::istringstream iss(input);
-    int value;
-    while (iss >> value) {
-        result.push_back(value);
+
+std::vector<int> transposing (std::vector<int> matrix_data, int cols){
+    int rows = matrix_data.size()/cols;
+
+    std::vector<int> transposed_matrix(cols * rows);
+    for (int i = 0; i < rows; ++i) {
+        for (int j = 0; j < cols; ++j) {
+            transposed_matrix[j * rows + i] = matrix_data[i * cols + j];
+        }
     }
-    return result;
+    return transposed_matrix;
 }
-
-
 
 
 
