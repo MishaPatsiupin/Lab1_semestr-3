@@ -11,7 +11,7 @@ int get_choize(int min, int max);
 int menu();
 int get_number(int min);
 int random(int min, int max);
-
+std::vector<int> char_to_vector(const char* input);
 
 
 

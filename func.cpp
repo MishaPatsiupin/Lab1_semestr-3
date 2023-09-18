@@ -77,7 +77,15 @@ int random(int min, int max) {
     return rand() % (max - min + 1) + min;
 }
 
-
+std::vector<int> char_to_vector(const char* input) {
+    std::vector<int> result;
+    std::istringstream iss(input);
+    int value;
+    while (iss >> value) {
+        result.push_back(value);
+    }
+    return result;
+}
 
 
 

@@ -2,6 +2,7 @@
 #include <iostream>
 #include "matrix.h"
 #include "func.h"
+
 /*Класс для работы с матрицами.
  *Поля – размер, одномерный массив.
  *Реализовать методы для произвольного доступа к элементам, добавления и удаления строки или столбца,
@@ -18,19 +19,19 @@ int main() {
 
 
     switch (func_choize) {
-        case 0:{
+        case 0: {
             return 0;
         }
-        case 1:{
-matrix_my.create_matrix();
+        case 1: {
+            matrix_my.create_matrix();
         }
-        case 2:{
+        case 2: {
 
         }
-        case 3:{
+        case 3: {
 
         }
-        case 4:{
+        case 4: {
 
         }
     }
