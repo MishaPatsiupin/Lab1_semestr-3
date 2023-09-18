@@ -4,16 +4,19 @@
 
 void matrix::create_matrix() {
 
+    if (this->matrix_cols != 0) {
+        this->matrix_cols = 0;
+        this->matrix_data = {'\0'};
+    }
+
     std::cout << "\nEnter 0, to auto create new matrix" << std::endl;
     std::cout << "Enter 1, to set matrix parameters" << std::endl;
 
     if (get_choize(0, 1) == 0) {
-        int temp_numbers_matrix_cols = 0;
         int temp_numbers_matrix_rows = 0;
 
         std::cout << "\nEnter to number of columns:" << std::endl;
-        temp_numbers_matrix_cols = get_number(1);
-        this->matrix_cols = temp_numbers_matrix_cols;
+        this->matrix_cols = get_number(1);
 
         std::cout << "Enter to number of rows:" << std::endl;
         temp_numbers_matrix_rows = get_number(1);
@@ -21,7 +24,9 @@ void matrix::create_matrix() {
         for (int i = this->matrix_cols * temp_numbers_matrix_rows; i > 0; i--) {
             this->matrix_data.push_back(random(-20, 20));
         }
-    } else {
+    }
+
+    else {
         std::cout << "\nEnter to number of columns: ";
         this->matrix_cols = get_number(1);
 
@@ -46,7 +51,7 @@ void matrix::create_matrix() {
 }
 
 void matrix::print_matrix() {
-    std::cout << "\n   Your matrix:\n";
+    std::cout << "\nYour matrix:\n";
 
     if (this->matrix_cols == 0) {
         std::cout << "Matrix emply\n";
@@ -63,8 +68,12 @@ void matrix::print_matrix() {
 }
 
 void matrix::transposing_matrix() {
-    this->matrix_data = transposing(this->matrix_data, this->matrix_cols);
-    this->matrix_cols = this->matrix_data.size() / this->matrix_cols;
+    if (this->matrix_cols == 0) {
+        std::cout << "Matrix emply\n";
+
+    } else {
+        this->matrix_data = transposing(this->matrix_data, this->matrix_cols);
+        this->matrix_cols = this->matrix_data.size() / this->matrix_cols;
+    print_matrix();
+    }
 }
-
-

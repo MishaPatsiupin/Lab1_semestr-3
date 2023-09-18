@@ -26,6 +26,7 @@ int get_choize(int min, int max) {
     }
 }
 
+
 int get_number(int min) {
     int number = -1;
 
@@ -58,14 +59,6 @@ choize = get_choize(0, 4);
 
 int count_size(const std::vector<int> &vec) {
     return vec.size();
-}
-
-void fill_new_vector(std::vector<int> &vec, const std::string &str) {
-    std::istringstream iss(str);
-    int num;
-    while (iss >> num) {
-        vec.push_back(num);
-    }
 }
 
 int random(int min, int max) {

@@ -1,5 +1,3 @@
-
-#include <iostream>
 #include "matrix.h"
 #include "func.h"
 
@@ -18,7 +16,7 @@ int main() {
     int func_choize;
 
     while (true) {
-     //   system("cls");
+ //       system("cls");
         func_choize = menu();
 
         switch (func_choize) {
@@ -34,11 +32,11 @@ int main() {
                 break;
             }
             case 3: {
-                matrix_my.transposing_matrix();
+
                 break;
             }
             case 4: {
-
+                matrix_my.transposing_matrix();
                 break;
             }
         }

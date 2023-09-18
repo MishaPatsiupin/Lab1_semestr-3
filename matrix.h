@@ -3,8 +3,6 @@
 
 #include <vector>
 #include <iostream>
-#include <sstream>
-#include <string>
 
 /*Класс для работы с матрицами.
  *Поля – размер, одномерный массив.
