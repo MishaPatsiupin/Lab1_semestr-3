@@ -93,7 +93,7 @@ void matrix::print_matrix() {
     std::cout << "\n Your matrix:\n";
     for (int j = 0; j < this->matrix_data.size() / this->matrix_cols; j++) {
         for (int i = 0; i < matrix_cols; i++) {
-            printf("%5d", matrix_data[j + i]);
+            printf("%5d", matrix_data[j* this->matrix_cols + i]);
         }
         std::cout << std::endl;
     }
