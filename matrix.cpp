@@ -12,14 +12,11 @@ void matrix::create_matrix() {
         int temp_numbers_matrix_rows = 0;
 
         std::cout << "\nEnter to number of columns:" << std::endl;
-        //matrix_input->matrix_cols = get_number(1);
         temp_numbers_matrix_cols = get_number(1);
         this->matrix_cols = temp_numbers_matrix_cols;
 
         std::cout << "Enter to number of rows:" << std::endl;
         temp_numbers_matrix_rows = get_number(1);
-        printf("%d\n", this->matrix_cols);
-        printf("%d\n", temp_numbers_matrix_rows);
 
         for (int i = this->matrix_cols * temp_numbers_matrix_rows; i > 0; i--) {
             this->matrix_data.push_back(random(-20, 20));
@@ -49,14 +46,20 @@ void matrix::create_matrix() {
 }
 
 void matrix::print_matrix() {
-    std::cout << "\n Your matrix:\n";
-    for (int j = 0; j < this->matrix_data.size() / this->matrix_cols; j++) {
-        for (int i = 0; i < matrix_cols; i++) {
-            printf("%5d", matrix_data[j * this->matrix_cols + i]);
+    std::cout << "\n   Your matrix:\n";
+
+    if (this->matrix_cols == 0) {
+        std::cout << "Matrix emply\n";
+
+    } else {
+        for (int j = 0; j < this->matrix_data.size() / this->matrix_cols; j++) {
+            for (int i = 0; i < matrix_cols; i++) {
+                printf("%5d", matrix_data[j * this->matrix_cols + i]);
+            }
+            std::cout << std::endl;
         }
         std::cout << std::endl;
     }
-    std::cout << std::endl;
 }
 
 void matrix::transposing_matrix() {

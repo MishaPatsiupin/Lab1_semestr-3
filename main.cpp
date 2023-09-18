@@ -18,7 +18,7 @@ int main() {
     int func_choize;
 
     while (true) {
-        system("cls");
+     //   system("cls");
         func_choize = menu();
 
         switch (func_choize) {
@@ -27,15 +27,19 @@ int main() {
             }
             case 1: {
                 matrix_my.create_matrix();
+                break;
             }
             case 2: {
                 matrix_my.print_matrix();
+                break;
             }
             case 3: {
                 matrix_my.transposing_matrix();
+                break;
             }
             case 4: {
 
+                break;
             }
         }
     }
