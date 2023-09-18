@@ -77,3 +77,7 @@ void matrix::transposing_matrix() {
     print_matrix();
     }
 }
+
+void matrix::change_data() {
+
+}

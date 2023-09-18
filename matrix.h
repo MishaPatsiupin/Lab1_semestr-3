@@ -26,7 +26,7 @@ public:
 
     void create_matrix();
     void print_matrix();
-
+    void change_data();
     void transposing_matrix();
 
 };
