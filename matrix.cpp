@@ -116,7 +116,7 @@ void matrix::change_data() {
             break;
         }
         case 5: {
-
+            delete_col();
             break;
         }
     }
@@ -173,6 +173,22 @@ correction++;
 
 
 
+    print_matrix();
+}
+
+void matrix::delete_col() {
+    print_matrix();
+    int del_col_after_this = 0; int correction = 0;
+    std::cout << "After which col do you want to delete?";
+    del_col_after_this = get_number(0);
+
+
+    int number_rows = this->matrix_data.size()/ this->matrix_cols;
+    for (int i = 0; i < number_rows; i++) {
+        this->matrix_data.erase(this->matrix_data.begin() + del_col_after_this + this->matrix_cols * i + correction);
+        correction--;
+    }
+    this->matrix_cols--;
     print_matrix();
 }
 
