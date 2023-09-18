@@ -112,7 +112,7 @@ void matrix::change_data() {
             break;
         }
         case 4: {
-
+            add_col();
             break;
         }
         case 5: {
@@ -123,6 +123,7 @@ void matrix::change_data() {
 }
 
 void matrix::add_row() {
+    print_matrix();
     int after_this_rows = 0;
     std::cout << "After which line will the new line be placed?";
     after_this_rows = get_number(0);
@@ -148,6 +149,10 @@ void matrix::delete_row() {
         this->matrix_data.erase(this->matrix_data.begin() + del_rows_after_this * this->matrix_cols);
     }
     print_matrix();
+}
+
+void matrix::add_col() {
+
 }
 
 
