@@ -30,10 +30,8 @@ public:
 
     void change_data();
     void change_one_element();
-    void change_row();
     void add_row();
     void delete_row();
-    void change_col();
     void add_col();
     void delete_col();
 

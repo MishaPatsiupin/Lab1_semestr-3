@@ -59,15 +59,13 @@ choize = get_choize(0, 4);
 int menu_change_data(){
     int choize = -1;
     std::cout << "\nEnter 1, to change one element" << std::endl; //автоматич
-    std::cout << "Enter 2, to change data in one row" << std::endl;
-    std::cout << "Enter 3, to add one row" << std::endl;
-    std::cout << "Enter 4, to delete one row" << std::endl;
-    std::cout << "Enter 5, to change data in one col" << std::endl;
-    std::cout << "Enter 6, to add one col" << std::endl;
-    std::cout << "Enter 7, to delete one col" << std::endl;
+    std::cout << "Enter 2, to add one row" << std::endl;
+    std::cout << "Enter 3, to delete one row" << std::endl;
+    std::cout << "Enter 4, to add one col" << std::endl;
+    std::cout << "Enter 5, to delete one col" << std::endl;
 
     std::cout << "Enter 0, for exit function\n" << std::endl;
-    choize = get_choize(0, 7);
+    choize = get_choize(0, 5);
     return choize;
 }
 

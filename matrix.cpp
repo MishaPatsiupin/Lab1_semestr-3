@@ -82,9 +82,9 @@ void matrix::change_one_element() {
     print_matrix();
     int i = 0, j = 0;
     std::cout << "In which line do you want to change the element?, i = ";
-    std::cin >> i;
+    i = get_number(0);
     std::cout << "Which column does it belong to?, j = ";
-    std::cin >> j;
+    j = get_number(0);
 
     std::cout << "Enter a new value --> ";
     std::cin >> this->matrix_data[(i-1)* this->matrix_cols + (j-1)];
@@ -106,7 +106,7 @@ void matrix::change_data() {
                     break;
                 }
                 case 2: {
-
+                    this->add_row();
                     break;
                 }
                 case 3: {
@@ -121,17 +121,23 @@ void matrix::change_data() {
 
                     break;
                 }
-                case 6: {
-
-                    break;
-                }
-                case 7: {
-
-                    break;
-                }
-
             }
+}
 
+void matrix::add_row() {
+    int after_this_rows = 0;
+    std::cout << "After which line will the new line be placed?";
+    after_this_rows = get_number(0);
+
+    for (int i = 1; i <= this->matrix_cols; i++){
+        int time_znah = 0;
+        std::cout << "Enter the " << i << "st element, -->";
+        std::cin >> time_znah;
+
+        auto position = this->matrix_data.begin() + after_this_rows * this->matrix_cols + i - 1;
+        this->matrix_data.insert(position, time_znah);
+    }
+    print_matrix();
 }
 
 
