@@ -152,7 +152,28 @@ void matrix::delete_row() {
 }
 
 void matrix::add_col() {
+    print_matrix();
+    int after_this_cols = 0;
+    std::cout << "After which cols will the new col be placed?";
+    after_this_cols = get_number(0);
 
+    int number_rows = this->matrix_data.size()/ this->matrix_cols;
+int correction = 0;
+    for (int i = 0; i < number_rows; i++) {
+        int time_znah = 0;
+        std::cout << "Enter the " << i+1 << "st element, -->";
+        std::cin >> time_znah;
+
+        auto position = this->matrix_data.begin() + i * this->matrix_cols + after_this_cols + correction;
+        this->matrix_data.insert(position, time_znah);
+correction++;
+    }
+    this->matrix_cols++;
+
+
+
+
+    print_matrix();
 }
 
 
