@@ -44,14 +44,14 @@ int get_number(int min) {
 }
 
 
-int menu() {
+int menu(){
     int choize = -1;
     std::cout << "\n----------Matrix Calculator--------" << std::endl;
     std::cout << "Enter 1, to create a new matrix" << std::endl; //автоматич
     std::cout << "Enter 2, to view the matrix" << std::endl;
     std::cout << "Enter 3, to view or minimize an arbitrary matrix element" << std::endl; //+строка, толбец
     std::cout << "Enter 4, for transposing a matrix" << std::endl;
-    std::cout << "\nEnter 0, for exit program\n" << std::endl;
+    std::cout << "Enter 0, for exit program\n" << std::endl;
 choize = get_choize(0, 4);
     return choize;
 }
@@ -59,14 +59,14 @@ choize = get_choize(0, 4);
 int menu_change_data(){
     int choize = -1;
     std::cout << "\nEnter 1, to change one element" << std::endl; //автоматич
-    std::cout << "\nEnter 2, to change data in one row" << std::endl;
+    std::cout << "Enter 2, to change data in one row" << std::endl;
     std::cout << "Enter 3, to add one row" << std::endl;
     std::cout << "Enter 4, to delete one row" << std::endl;
-    std::cout << "\nEnter 5, to change data in one col" << std::endl;
+    std::cout << "Enter 5, to change data in one col" << std::endl;
     std::cout << "Enter 6, to add one col" << std::endl;
     std::cout << "Enter 7, to delete one col" << std::endl;
 
-    std::cout << "\nEnter 0, for exit function\n" << std::endl;
+    std::cout << "Enter 0, for exit function\n" << std::endl;
     choize = get_choize(0, 7);
     return choize;
 }
@@ -96,7 +96,6 @@ std::vector<int> transposing (std::vector<int> matrix_data, int cols){
     }
     return transposed_matrix;
 }
-
 
 
 

@@ -78,6 +78,64 @@ void matrix::transposing_matrix() {
     }
 }
 
+void matrix::change_one_element() {
+    print_matrix();
+    int i = 0, j = 0;
+    std::cout << "In which line do you want to change the element?, i = ";
+    std::cin >> i;
+    std::cout << "Which column does it belong to?, j = ";
+    std::cin >> j;
+
+    std::cout << "Enter a new value --> ";
+    std::cin >> this->matrix_data[(i-1)* this->matrix_cols + (j-1)];
+    std::cout << "Okk.";
+    print_matrix();
+}
+
 void matrix::change_data() {
+        int func_choize;
+
+            func_choize = menu_change_data();
+
+            switch (func_choize) {
+                case 0: {
+                    break;
+                }
+                case 1: {
+                    this->change_one_element();
+                    break;
+                }
+                case 2: {
+
+                    break;
+                }
+                case 3: {
+
+                    break;
+                }
+                case 4: {
+
+                    break;
+                }
+                case 5: {
+
+                    break;
+                }
+                case 6: {
+
+                    break;
+                }
+                case 7: {
+
+                    break;
+                }
+
+            }
 
 }
+
+
+
+
+
+

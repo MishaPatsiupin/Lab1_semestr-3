@@ -26,7 +26,7 @@ int main() {
                 break;
             }
             case 3: {
-
+                matrix_my.change_data();
                 break;
             }
             case 4: {
@@ -39,3 +39,5 @@ int main() {
     std::cout << "Hello, World!" << std::endl;
     return 0;
 }
+
+
